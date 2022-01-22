@@ -4,7 +4,7 @@ volumes:
   resin-data: {}
 services:
   jellyfin:
-    image: linuxserver/jellyfin
+    image: linuxserver/jellyfin:10.7.7
     devices:
       - /dev/vchiq:/dev/vchiq ##HWA Chip
     container_name: jellyfin
