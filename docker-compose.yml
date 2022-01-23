@@ -24,6 +24,7 @@ services:
       - 'vol-media:/media'
       - 'vol-data:/data'
     labels:
+      io.balena.features.external-storage: '1'
       io.balena.features.kernel-modules: '1'
       io.balena.features.firmware: '1'
       io.balena.features.dbus: '1'
