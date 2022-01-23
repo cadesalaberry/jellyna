@@ -14,6 +14,7 @@ services:
     privileged: true
     restart: always
     environment:
+      UDEV: 'on'
       PUID: '1000'
       PGID: '1000'
       TZ: Europe/Paris
