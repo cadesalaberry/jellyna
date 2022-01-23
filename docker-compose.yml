@@ -2,8 +2,7 @@ version: '2.1'
 networks: {}
 volumes:
   vol-config: {}
-  vol-media: {}
-  vol-data: {}
+  vol-cache: {}
 services:
   jellyfin:
     image: 'linuxserver/jellyfin:10.7.7'
@@ -21,8 +20,7 @@ services:
       UMASK_SET: '022'
     volumes:
       - 'vol-config:/config'
-      - 'vol-media:/media'
-      - 'vol-data:/data'
+      - 'vol-cache:/cache'
     labels:
       io.balena.features.external-storage: '1'
       io.balena.features.kernel-modules: '1'
