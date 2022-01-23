@@ -7,7 +7,8 @@ volumes:
 services:
   jellyfin:
     image: 'linuxserver/jellyfin:10.7.7'
-    devices: []
+    devices:
+      - '/dev/vchiq:/dev/vchiq'
     container_name: jellyfin
     network_mode: host
     privileged: true
