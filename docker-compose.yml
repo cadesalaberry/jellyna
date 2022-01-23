@@ -1,4 +1,4 @@
-version: '2.2'
+version: '2.1'
 networks: {}
 volumes:
   vol-config: {}
@@ -6,9 +6,8 @@ volumes:
   vol-data: {}
 services:
   jellyfin:
-    image: 'linuxserver/jellyfin:10.7.7'
-    devices:
-      - '/dev/vchiq:/dev/vchiq' ##HWA Chip
+    image: jellyfin/jellyfin
+    devices: []
     container_name: jellyfin
     network_mode: host
     privileged: true
@@ -16,7 +15,7 @@ services:
     environment:
       PUID: '1000'
       PGID: '1000'
-      TZ: 'Europe/Paris'
+      TZ: Europe/Paris
       UMASK_SET: '022'
     volumes:
       - 'vol-config:/config'
