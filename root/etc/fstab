@@ -1,0 +1,1 @@
+//192.168.1.254/Freebox /media/freebox cifs credentials=/root/.smbcredentials,uid=1000,gid=1000,_netdev,rw,iocharset=utf8,file_mode=0666,dir_mode=0777,sec=ntlmv2,vers=2.0

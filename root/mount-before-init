@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# Makes sure to mount folders specified in fstab when the container starts
+mount -a
+
+/init
