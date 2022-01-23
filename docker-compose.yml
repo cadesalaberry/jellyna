@@ -1,7 +1,9 @@
 version: '2.2'
 networks: {}
 volumes:
-  resin-data: {}
+  vol-config: {}
+  vol-media: {}
+  vol-data: {}
 services:
   jellyfin:
     image: linuxserver/jellyfin:10.7.7
@@ -17,11 +19,9 @@ services:
       TZ: Europe/Paris 
       UMASK_SET: "022"
     volumes:
-      - 'resin-data:/data'
-      - /data/jellyfin:/config
-      - /media:/media
-      - /dev/shm:/config/data/transcoding-temp/transcodes
-      - /opt/vc/lib:/opt/vc/lib   ## OpenMax Libraries
+      - 'vol-config:/config'
+      - 'vol-media:/media'
+      - 'vol-data:/data'
     labels:
       io.balena.features.kernel-modules: '1'
       io.balena.features.firmware: '1'
